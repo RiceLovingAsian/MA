@@ -1,0 +1,136 @@
+"Aufbau
+                                                        SUV / Geländewagen
+                                                     
+
+
+Fahrzeugart
+                                                        Neuwagen
+                                                     
+
+
+Farbe
+                                                        weiss
+                                                     
+
+
+Kilometer
+                                                        45 Km
+                                                     
+
+
+Getriebeart
+                                                        Automat
+                                                     
+
+
+Antrieb
+                                                        Allradantrieb
+                                                     
+
+
+Treibstoff
+                                                        Benzin
+                                                     
+
+
+Leistung
+                                                        249 PS
+                                                     
+
+
+Hubraum
+                                                        1'998 ccm
+                                                     
+
+
+Türen
+                                                        5
+                                                     
+
+
+
+
+Innenfarbe
+                                                        schwarz
+                                                     
+
+
+Verbrauch
+                                                        9.5 / 6.6 / 7.7 (St/Land/Tot)
+
+
+
+Co2-Emission
+                                                        174 g/km
+                                                     
+
+
+Sitze
+                                                        5
+                                                     
+
+
+Zylinder
+                                                        4
+                                                     
+
+
+Leergewicht
+                                                        2'164 Kg
+                                                     
+
+
+Typengenehmigung
+                                                        1JA401
+                                                     
+
+
+Garantie
+                                                    Ja
+                                                                                                            
+
+
+
+Neupreis
+                                                        CHF 55'420.-
+                                                     
+
+
+Preis
+                                                        CHF 46'900.-
+                                                     
+
+
+ 
+
+
+                                                        var make = '';
+                                                        if (location.search.search(""make="") != -1)
+                                                        {
+                                                            make = location.search.split(""&"")[0];
+                                                        }
+                                                        else
+                                                        {
+                                                            make = """";
+                                                        }
+                                                        sas_pageid='65229/621464';	// Seite : autolina.ch-de/auto-detail/link
+                                                        sas_formatid=38291;		// Format : mobile-service-link-1 1x1
+                                                        sas_target=make;			// Targeting
+                                                        SmartAdServer(sas_pageid,sas_formatid,sas_target);
+                                                    
+
+
+
+
+
+
+
+
+ 
+
+
+                                                        sas_pageid='65229/621464';  // Seite : autolina.ch-de/auto-detail/link
+                                                        sas_formatid=36921;     // Format : mobile-service-link-2 1x1
+                                                        sas_target='';          // Targeting
+                                                        SmartAdServer(sas_pageid,sas_formatid,sas_target);"
+"['Aufbau', 'SUV', 'Geländewagen', 'Fahrzeugart', 'Neuwagen', 'Farbe', 'weiss', 'Kilometer', '45', 'Km', 'Getriebeart', 'Automat', 'Antrieb', 'Allradantrieb', 'Treibstoff', 'Benzin', 'Leistung', '249', 'PS', 'Hubraum', ""1'998"", 'ccm', 'Türen', '5', 'Innenfarbe', 'schwarz', 'Verbrauch', '9.5', '6.6', '7.7', '(StLandTot)', 'Co2-Emission', '174', 'gkm', 'Sitze', '5', 'Zylinder', '4', 'Leergewicht', ""2'164"", 'Kg', 'Typengenehmigung', '1JA401', 'Garantie', 'Ja', 'Neupreis', 'CHF', ""55'420.-"", 'Preis', 'CHF', ""46'900.-"", 'var', 'make', ""'';"", 'if', '(location.search.search(""make"")', '!', '-1)', 'make', 'location.search.split(""&"")[0];', 'else', 'make', '"""";', ""sas_pageid'65229621464';"", 'Seite', ':', 'autolina.ch-deauto-detaillink', 'sas_formatid38291;', 'Format', ':', 'mobile-service-link-1', '1x1', 'sas_targetmake;', 'Targeting', 'SmartAdServer(sas_pageid,sas_formatid,sas_target);', ""sas_pageid'65229621464';"", 'Seite', ':', 'autolina.ch-deauto-detaillink', 'sas_formatid36921;', 'Format', ':', 'mobile-service-link-2', '1x1', ""sas_target'';"", 'Targeting', 'SmartAdServer(sas_pageid,sas_formatid,sas_target);']"
