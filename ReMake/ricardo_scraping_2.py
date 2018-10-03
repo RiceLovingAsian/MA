@@ -28,5 +28,4 @@ for x in range(1,90):
 		else:
 			for a in articles:
 				car = rst.run('https://auto.ricardo.ch'+str(a["href"]))
-				print('https://auto.ricardo.ch/'+str(a["href"]))
-				#print(car.markestring,car.modelstring)
+								#print(car.markestring,car.modelstring)
