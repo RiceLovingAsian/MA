@@ -32,6 +32,8 @@ class run():
 		brand = filter.getbrand(arttitle)
 		print(arttitle)
 		print(brand)
+		self.price = lister(soup.find('div',{'class':'price mdl-typography--font-light'}))
+		print(self.price)
 		prop = soup.find_all('span', {'class' : 'jss170 jss172'})
 
 		value = soup.find_all('span', {'class' : 'jss172'})
