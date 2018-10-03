@@ -27,6 +27,6 @@ for x in range(1,90):
 			break
 		else:
 			for a in articles:
-				car = rst.run(a["href"])
+				car = rst.run('https://auto.ricardo.ch/'+str(a["href"]))
 				print(car.comblist)
 				#print(car.markestring,car.modelstring)
