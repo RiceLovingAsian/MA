@@ -35,8 +35,9 @@ class run():
 		value=lister(value)
 		self.comblist = []
 		for x in range(len(make)):
-			print(x)
 			self.comblist.append((make[x],value[x]))
+
+		print(self.comblist)
 		#f.write(str(self.pricestring+self.markestring+self.modelstring+self.regstring+self.kmstring+self.fueltstring+self.fuelcstring+self.pstring+self.cubicstr+self.bodystr+self.outcstr+self.doorstr+self.seatstr+self.wthstr+self.transstr+self.wheelstr))
 		#f.write(lb)
 		#f.close()
