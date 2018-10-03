@@ -1,6 +1,5 @@
 brands = ["lamborghini","peugeot","volvo"]
 
-name ="volvo xc60 allrad blabliblö"
-
-nameS = name.split(' ')
-print( list(filter(lambda x: x in brands, nameS)))
+def getbrand(artname):
+	nameS = artname.split(' ')
+	return list(filter(lambda x: x in brands, nameS))[0]

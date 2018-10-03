@@ -1,5 +1,5 @@
 import bs4
-import ricardo_scraping_test as rst
+import ricardo_scraping_1 as rst
 from urllib.request import urlopen as ureq
 from bs4 import BeautifulSoup as soup 
 carlist = []
@@ -28,4 +28,5 @@ for x in range(1,90):
 		else:
 			for a in articles:
 				car = rst.run(a["href"])
-				print(car.markestring,car.modelstring)
+				print(car.comblist)
+				#print(car.markestring,car.modelstring)

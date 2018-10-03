@@ -7,6 +7,13 @@ def function(type):
 		y += str(x.text)
 	y+=";"
 	return(y)
+
+def lister(tolist):
+	retlist = []
+	for cont in tolist:
+		retlist.append(''.join(cont.findAll(text=True)))
+	return retlist
+
 class run():
 	letterlist = [";","A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z","1","2","3","4","5","6","7","8","9","0"]
 	def __init__(self,link):
@@ -17,61 +24,22 @@ class run():
 		sauce = urllib.request.urlopen(link)
 		soup = bs.BeautifulSoup(sauce, 'lxml')
 
-		make = soup.find_all('td', {'data-qa' : 'make'})
-		model = soup.find_all('td', {'data-qa' : 'model'})
-		registrationdate = soup.find_all('td', {'itemprop' : 'productionDate'})
-		kilometers = soup.find_all('td', {'data-qa' : 'kilometers'})
-		fueltype = soup.find_all('td', {'data-qa' : 'fueltype'})
-		fuelconsumption = soup.find_all('td', {'data-qa' : 'fuelconsumption'})
-		performance = soup.find_all('td', {'data-qa' : 'performance'})
-		cubiccapacity = soup.find_all('td', {'data-qa' : 'cubiccapacity'})
-		bodytype = soup.find_all('td', {'data-qa' : 'bodytype'})
-		outsidecolor = soup.find_all('td', {'itemprop' : 'color'})
-		numberofdoors = soup.find_all('td', {'data-qa' : 'numberofdoors'})
-		numberofseats = soup.find_all('td', {'data-qa' : 'numberofseats'})
-		emptyweight = soup.find_all('td', {'itemprop' : 'weight'})
-		transmissiontype = soup.find_all('td', {'data-qa' : 'transmissiontype'})
-		drivingwheels = soup.find_all('td', {'data-qa' : 'drivingwheels'})
-		price = soup.findAll('p',{'itemprop':'price'}, content=True)
+		make = soup.find_all('span', {'class' : 'jss170 jss172'})
 
-		self.price= function(price)
-		self.marke = function(make)
-		self.model = function(model)
-		self.registrationdate = function(registrationdate)
-		self.kilometres = function(kilometers)
-		self.fueltype =function(fueltype)
-		self.fuelconsumption = function(fuelconsumption)
-		self.performance = function(performance)
-		self.cubiccapacity = function(cubiccapacity)
-		self.bodytype = function(bodytype)
-		self.outsidecolor =function(outsidecolor)
-		self.numberofdoors= function(numberofdoors)
-		self.numberofseats = function(numberofseats)
-		self.emptyweight =function(emptyweight)
-		self.transmissiontype =function(transmissiontype)
-		self.wheels =function(drivingwheels)
+		value = soup.find_all('span', {'class' : 'jss172'})
 
-		self.pricestring = self.correct(self.price)
-		self.markestring = self.correct(string=self.marke)
-		self.modelstring = self.correct(self.model)
-		self.regstring = self.correct(self.registrationdate)
-		self.kmstring = self.correct(self.kilometres)
-		self.fueltstring = self.correct(self.fueltype)
-		self.fuelcstring = self.correct(self.fuelconsumption)
-		self.pstring = self.correct(self.performance)
-		self.cubicstr = self.correct(self.cubiccapacity)
-		self.bodystr = self.correct(self.bodytype)
-		self.outcstr = self.correct(self.outsidecolor)
-		self.doorstr = self.correct(self.numberofdoors)
-		self.seatstr = self.correct(self.numberofseats)
-		self.wthstr = self.correct(self.emptyweight)
-		self.transstr = self.correct(self.transmissiontype)
-		self.wheelstr = self.correct(self.wheels)
-		lb = "\n"
-
-		f.write(str(self.pricestring+self.markestring+self.modelstring+self.regstring+self.kmstring+self.fueltstring+self.fuelcstring+self.pstring+self.cubicstr+self.bodystr+self.outcstr+self.doorstr+self.seatstr+self.wthstr+self.transstr+self.wheelstr))
-		f.write(lb)
-		f.close()
+		if len(make) == 0:
+			make = soup.find_all('span', {'class' : 'label'})
+			value = soup.find_all('span', {'class' : 'value'})
+		make=lister(make)
+		value=lister(value)
+		self.comblist = []
+		for x in range(len(make)):
+			print(x)
+			self.comblist.append((make[x],value[x]))
+		#f.write(str(self.pricestring+self.markestring+self.modelstring+self.regstring+self.kmstring+self.fueltstring+self.fuelcstring+self.pstring+self.cubicstr+self.bodystr+self.outcstr+self.doorstr+self.seatstr+self.wthstr+self.transstr+self.wheelstr))
+		#f.write(lb)
+		#f.close()
 	def correct(self,string):
 		self.string = ""
 		self.list = list(string)
