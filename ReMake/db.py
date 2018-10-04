@@ -1,5 +1,5 @@
 import sqlite3
-ATTRS = ('price','brand','modell','kilometer','ps','leergewicht','getriebsart','hubraum','antriebsart','anzahl türen','anzahl sitze','treibstoff','verbrauch')
+ATTRS = ('price','brand','modell','kilometer','ps','leergewicht','getriebeart','hubraum','antriebsart','anzahl türen','anzahl sitze','treibstoff','verbrauch')
 
 
 

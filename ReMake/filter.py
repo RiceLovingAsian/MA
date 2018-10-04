@@ -12,22 +12,36 @@ def getbrand(artname):
 	nameS = nameS.split(' ')
 	dalist = list(filter(lambda x: x in brands2, nameS))
 	if len(dalist)>1:
-	 	retstr = ""
-	 	for x in dalist:
-	 		retstr += str(x)+' '
+		if dalist[0].title() in brands:
+			retstr = dalist[0]
+		else:
+		 	retstr = ""
+		 	for x in dalist:
+		 		retstr += str(x)+' '
 	else:
 	 	retstr = dalist[0]
 	return retstr
 
 
-def getmodel(artname):
+def getmodel(car,artname):
+	retstr = ''
+	for x in artname.lower().split(' '):
+		if x !=car.brand:
+			retstr += x+' '
+	retstr = retstr[:-1]
+def bäää():
+	retstr = ""
 	nameS = artname.lower()
 	nameS = nameS.split(' ')
 	dalist = list(filter(lambda x: x not in brands2, nameS))
 	if len(dalist)>1:
-	 	retstr = ""
 	 	for x in dalist:
 	 		retstr += str(x)+' '
 	else:
-	 	retstr = dalist[0]
+	 	try:retstr = dalist[0]
+	 	except:
+	 		if str(nameS[0]) in brands:
+	 			retstr = nameS[0]
+	 		elif str(nameS[0]+' '+nameS[1])in brands:
+	 			retstr = str(nameS[0]+' '+nameS[1])
 	return retstr
