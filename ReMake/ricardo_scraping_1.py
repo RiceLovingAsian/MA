@@ -31,7 +31,8 @@ class run():
 		stringlist = ""
 		sauce = urllib.request.urlopen(link)
 		soup = bs.BeautifulSoup(sauce, 'lxml')
-		self.price = lister(soup.find('div',{'class':'price mdl-typography--font-light'}))
+		try:self.price = lister(soup.find('div',{'class':'price mdl-typography--font-light'}))[1]
+		except: self.price = False
 		if self.price:
 			try:arttitle = lister(soup.find('div',{'class':'title'}))[0]
 			except: arttitle=lister(soup.find('div',{'class':'titleContainer--1koNs'}))[0]
