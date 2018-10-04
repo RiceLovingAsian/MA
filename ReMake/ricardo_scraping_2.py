@@ -2,6 +2,7 @@ import bs4
 import ricardo_scraping_1 as rst
 from urllib.request import urlopen as ureq
 from bs4 import BeautifulSoup as soup 
+import db
 carlist = []
 filename = "ricardo_scraping_test_1.csv"
 f = open(filename, "w")
@@ -10,9 +11,9 @@ f.write(headers[0])
 f.close()
 
 for x in range(1,90):
-	print(x)
+	print('BRAND {}'.format(x))
 	for z in range(1,300):
-		print(z)
+		print('PAGE {}'.format(z))
 		my_ulr = str("https://auto.ricardo.ch/de/s?make="+str(x)+"&offer_type=classified&sort_type=registration_date&sort_order=asc&page="+str(z))
 
 		uClient = ureq(my_ulr)
@@ -34,6 +35,8 @@ for x in range(1,90):
 				car = rst.run('https://auto.ricardo.ch'+str(a['href']))
 			else:
 				car = rst.run(str(a["href"]))
+			if car.quitit:break
+			db.insert(car)
 
 		if len(page_soup.findAll('button',{'class':'ric-pagination__button mdl-js-button mdl-js-ripple-effect ric-layout__small--hide'}))==0 and len(page_soup.findAll('button',{'class':'ric-pagination__button mdl-js-button mdl-js-ripple-effect'}))==0:
 			break

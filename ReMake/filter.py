@@ -19,3 +19,15 @@ def getbrand(artname):
 	 	retstr = dalist[0]
 	return retstr
 
+
+def getmodel(artname):
+	nameS = artname.lower()
+	nameS = nameS.split(' ')
+	dalist = list(filter(lambda x: x not in brands2, nameS))
+	if len(dalist)>1:
+	 	retstr = ""
+	 	for x in dalist:
+	 		retstr += str(x)+' '
+	else:
+	 	retstr = dalist[0]
+	return retstr
