@@ -43,7 +43,8 @@ class run():
 			try:km = lister(soup.find('div',{'class':'mileage item'}))[1]
 			except: km = 0
 			self.findict['kilometer']=km
-			hp = lister(soup.find('div',{'class':'power item'}))[1]
+			try:hp = lister(soup.find('div',{'class':'power item'}))[1]
+			except: hp = 'Unknown'
 			self.findict['ps'] = hp
 			prop = soup.find_all('span', {'class' : 'jss170 jss172'})
 
