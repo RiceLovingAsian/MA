@@ -28,7 +28,8 @@ class run():
 		f = open(filename, "a")
 		liste = []
 		stringlist = ""
-		sauce = urllib.request.urlopen(link)
+		try:sauce = urllib.request.urlopen(link)
+		except: sauce = urllib.request.urlopen(link)
 		soup = bs.BeautifulSoup(sauce, 'lxml')
 		try:self.price = lister(soup.find('div',{'class':'price mdl-typography--font-light'}))[1]
 		except: self.price = False
@@ -63,3 +64,5 @@ class run():
 					self.findict[x[0].lower()]=x[1]
 		else:
 			self.quitit = True
+
+
