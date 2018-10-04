@@ -60,6 +60,5 @@ class run():
 			for x in self.comblist:
 				if x[0].lower() in ATTRS:
 					self.findict[x[0].lower()]=x[1]
-			print(self.findict['getriebeart'])
 		else:
 			self.quitit = True
