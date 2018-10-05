@@ -2,7 +2,17 @@ import bs4 as bs
 import urllib.request
 import filter as filthy
 import db
-ATTRS = ('modell','kilometer','ps','leergewicht','getriebeart','hubraum','antriebsart','anzahl türen','anzahl sitze','treibstoff','verbrauch')
+ATTRS = ('modell',
+	'kilometer',
+	'ps',
+	'leergewicht',
+	'getriebeart',
+	'hubraum',
+	'antriebsart',
+	'anzahl türen',
+	'anzahl sitze',
+	'treibstoff',
+	'verbrauch')
 	
 def function(type):
 	y = ""
@@ -76,3 +86,4 @@ class run():
 						self.findict[x[0].lower()]=x[1]
 			else:
 				self.quitit = True
+				
