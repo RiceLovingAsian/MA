@@ -25,10 +25,11 @@ def getbrand(artname):
 
 def getmodel(car,artname):
 	retstr = ''
-	for x in artname.lower().split(' '):
-		if x !=car.brand:
-			retstr += x+' '
-	retstr = retstr[:-1]
+	artname = artname.lower()
+	for x in car.brand.lower().split(' '):
+		artname = artname.replace(str(x),'')
+	return artname	
+	return retstr
 def bäää():
 	retstr = ""
 	nameS = artname.lower()

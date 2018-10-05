@@ -9,17 +9,17 @@ def createdb():
 	c.execute('''DROP TABLE CARS''')
 	c.execute('''CREATE TABLE CARS(
 		Code INTEGER NOT_NULL  AUTO_INCREMENT,
-		price,
+		price INT,
 		brand,
 		modell,
-		km,
-		ps,
+		km INT,
+		ps INT,
 		leergewicht,
 		getriebsart,
 		hubraum,
 		antriebsart,
-		türen,
-		sitze,
+		türen INT,
+		sitze INT,
 		treibstoff,
 		verbrauch,
 		PRIMARY KEY(Code));''')

@@ -3,6 +3,7 @@ import ricardo_scraping_1 as rst
 from urllib.request import urlopen as ureq
 from bs4 import BeautifulSoup as soup 
 import db
+db.createdb()
 carlist = []
 filename = "ricardo_scraping_test_1.csv"
 f = open(filename, "w")
