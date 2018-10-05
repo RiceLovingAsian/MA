@@ -28,6 +28,7 @@ def getmodel(car,artname):
 	artname = artname.lower()
 	for x in car.brand.lower().split(' '):
 		artname = artname.replace(str(x),'')
+	artname = artname.replace("'",'')
 	return artname	
 	return retstr
 def bäää():
