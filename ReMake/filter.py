@@ -1,6 +1,11 @@
-brands = ["aixam","Alfa Romeo","American Motors","Aston Martin","Audi","Austin","Bentley","Bertone","Bmw","Bmw-Alpina","Bugatti","Buick","Cadillac","Caterham","Chevrolet","Chrysler","Citroen","citroën","Dacia","Daewoo","Daihatsu","Daimler","De Tomaso","Dodge","Donkervoort","Ferrari","Fiat","Ford","Ford(USA)","Honda","Hs","Hummer","Hyundai","Innocenti","Isuzu","Isuzu(j)","Jaguar","Jeep","Kia","Lada","Lamborghini","Lancia","Land Rover","Land-Rover","Lexus","Ligier","Lotus","Maserati","Mazda","Mercedes-Benz","Mg","Minelli","Mini","Mitsubishi","Morgan","Nissan","Oldsmobile","Opel","Peugeot","Pontiac","Porsche","Puch","Qvale","Reliant","Renault","Rolls-Royce","Rover","Saab","Seat","Skoda","Smart","Ssang Yong","Subaru","Suzuki","Talbot","Tata","Toyota","Tvr","Venturi","Volvo","Vw","Wiesmann","Infiniti","Iveco","Piaggo","Ktm","Sokon","Think","Tesla","Artega","McLaren","Mega","Giotti Victoria","Fisker","Dfsk","Ds Automobiles"]
+brands = ["aixam","Alfa Romeo","American Motors","Aston Martin","Audi","Austin","Bentley","Bertone","Bmw","Bmw-Alpina","Bugatti","Buick","Cadillac","Caterham","Chevrolet","Chrysler","Citroen","citroën","Dacia","Daewoo","Daihatsu","Daimler","De Tomaso","Dodge","Donkervoort","Ferrari","Fiat","Ford","Ford(USA)","Honda","Hs","Hummer","Hyundai","Innocenti","Isuzu","Isuzu(j)","Jaguar","Jeep","Kia","Lada","Lamborghini","Lancia","Land Rover","Land-Rover","Lexus","Ligier","Lotus","Maserati","Mazda","Mercedes-Benz","mercedes","Mg","Minelli","Mini","Mitsubishi","Morgan","Nissan","Oldsmobile","Opel","Peugeot","Pontiac","Porsche","Puch","Qvale","Reliant","Renault","Rolls-Royce","Rover","Saab","Seat","Skoda","Smart","Ssang Yong","Ssangyong","Ssang-yong","Subaru","Suzuki","Talbot","Tata","Toyota","Tvr","Venturi","Volvo","Vw","Wiesmann","Infiniti","Iveco","Piaggo","Ktm","Sokon","Think","Tesla","Artega","McLaren","Mega","Giotti Victoria","Fisker","Dfsk","Ds Automobiles"]
 brands2 = []
-badguylist = ("land-rover")
+badguydict = {
+	"land-rover":'land rover',
+	"landrover":"land rover",
+	"Ssangyong":"ssang yong",
+	"Ssang-yong":"ssang yong",
+	"volkswagen":"vw"}
 for x in brands:
 	x = x.lower().split(' ')
 	if len(x)!=1:
@@ -21,8 +26,8 @@ def getbrand(artname):
 		 		retstr += str(x)+' '
 	else:
 	 	retstr = dalist[0]
-	if retstr in badguylist:
-		retstr = retstr.replace('-','')
+	if retstr in badguydict.keys():
+		retstr = badguydict[retstr]
 	return retstr
 
 
