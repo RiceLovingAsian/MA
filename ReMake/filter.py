@@ -1,4 +1,4 @@
-brands = ["aixam","Alfa Romeo","American Motors","Aston Martin","Audi","Austin","Bentley","Bertone","Bmw","Bmw-Alpina","Bugatti","Buick","Cadillac","Caterham","Chevrolet","Chrysler","Citroen","citroën","Dacia","Daewoo","Daihatsu","Daimler","De Tomaso","Dodge","Donkervoort","Ferrari","Fiat","Ford","Ford(USA)","Honda","Hs","Hummer","Hyundai","Innocenti","Isuzu","Isuzu(j)","Jaguar","Jeep","Kia","Lada","Lamborghini","Lancia","Land Rover","Land-Rover","Lexus","Ligier","Lotus","Maserati","Mazda","Mercedes-Benz","mercedes","Mg","Minelli","Mini","Mitsubishi","Morgan","Nissan","Oldsmobile","Opel","Peugeot","Pontiac","Porsche","Puch","Qvale","Reliant","Renault","Rolls-Royce","Rover","Saab","Seat","Skoda","Smart","Ssang Yong","Ssangyong","Ssang-yong","Subaru","Suzuki","Talbot","Tata","Toyota","Tvr","Venturi","Volvo","Vw","Wiesmann","Infiniti","Iveco","Piaggo","Ktm","Sokon","Think","Tesla","Artega","McLaren","Mega","Giotti Victoria","Fisker","Dfsk","Ds Automobiles"]
+brands = ["aixam","Alfa Romeo","Datsun","American Motors","Aston Martin","Audi","Austin","Bentley","Bertone","Bmw","Bmw-Alpina","Bugatti","Buick","Cadillac","Caterham","Chevrolet","Chrysler","Citroen","citroën","Dacia","Daewoo","Daihatsu","Daimler","De Tomaso","Dodge","Donkervoort","Ferrari","Fiat","Ford","Ford(USA)","Honda","Hs","Hummer","Hyundai","Innocenti","Isuzu","Isuzu(j)","Jaguar","Jeep","Kia","Lada","Lamborghini","Lancia","Land Rover","Land-Rover","Lexus","Ligier","Lotus","Maserati","Mazda","Mercedes-Benz","mercedes","Mg","Minelli","Mini","Mitsubishi","Morgan","Nissan","Oldsmobile","Opel","Peugeot","Pontiac","Porsche","Puch","Qvale","Reliant","Renault","Rolls-Royce","Rover","Saab","Seat","Skoda","Smart","Ssang Yong","Ssangyong","Ssang-yong","Subaru","Suzuki","Talbot","Tata","Toyota","Tvr","Venturi","Volvo","Vw","Volkswagen","Wiesmann","Infiniti","Iveco","Piaggo","Ktm","Sokon","Think","Tesla","Artega","McLaren","Mega","Giotti Victoria","Fisker","Dfsk","Ds Automobiles"]
 brands2 = []
 badguydict = {
 	"land-rover":'land rover',
@@ -24,7 +24,7 @@ def getbrand(artname):
 		 	retstr = ""
 		 	for x in dalist:
 		 		retstr += str(x)+' '
-	else:
+	elif len(dalist)==1:
 	 	retstr = dalist[0]
 	if retstr in badguydict.keys():
 		retstr = badguydict[retstr]
@@ -39,20 +39,4 @@ def getmodel(car,artname):
 	artname = artname.replace("'","")
 	artname = artname.replace('"','')
 	return artname	
-	return retstr
-def bäää():
-	retstr = ""
-	nameS = artname.lower()
-	nameS = nameS.split(' ')
-	dalist = list(filter(lambda x: x not in brands2, nameS))
-	if len(dalist)>1:
-	 	for x in dalist:
-	 		retstr += str(x)+' '
-	else:
-	 	try:retstr = dalist[0]
-	 	except:
-	 		if str(nameS[0]) in brands:
-	 			retstr = nameS[0]
-	 		elif str(nameS[0]+' '+nameS[1])in brands:
-	 			retstr = str(nameS[0]+' '+nameS[1])
 	return retstr

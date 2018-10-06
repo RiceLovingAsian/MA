@@ -86,4 +86,3 @@ class run():
 						self.findict[x[0].lower()]=x[1]
 			else:
 				self.quitit = True
-				
