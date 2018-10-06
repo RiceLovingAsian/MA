@@ -11,7 +11,7 @@ headers = ["Preis;Marke;Modell;Registrationdate;Kilometers;Fueltype; fuelconsump
 f.write(headers[0])
 f.close()
 
-for x in range(1,90):
+for x in range(1,400):
 	print('BRAND {}'.format(x))
 	for z in range(1,300):
 		print('PAGE {}'.format(z))
