@@ -16,14 +16,17 @@ brands = [
 "Subaru","Suzuki","Talbot","Tata","Toyota","Tvr",
 "Venturi","Volvo","Vw","Volkswagen","Wiesmann","Infiniti",
 "Iveco","Piaggo","Ktm","Sokon","Think","Tesla","Artega","McLaren","Mega",
-"Giotti Victoria","Fisker","Dfsk","Ds Automobiles",'Gmc']
+"Giotti Victoria","Fisker","Dfsk","Ds Automobiles",'Gmc','lincoln','maybach','morris',
+"plymouth","simca","trabant","piaggio","Ac","amc","autobianchi","delorean",
+"dkw","mercury","pgo","studebaker",'Triumph']
 brands2 = []
 badguydict = {
 	"land-rover":'land rover',
 	"landrover":"land rover",
 	"Ssangyong":"ssang yong",
 	"Ssang-yong":"ssang yong",
-	"volkswagen":"vw"}
+	"volkswagen":"vw",
+	"mercedes":"mercedes-benz"}
 for x in brands:
 	x = x.lower().split(' ')
 	if len(x)!=1:

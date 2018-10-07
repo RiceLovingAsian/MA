@@ -11,7 +11,7 @@ ATTRS = ('modell',
 	'antriebsart',
 	'anzahl türen',
 	'anzahl sitze',
-	'treibstoff',
+	'kraftstoff',
 	'verbrauch')
 	
 def function(type):

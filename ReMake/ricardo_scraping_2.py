@@ -6,14 +6,12 @@ import db
 db.createdb()
 carlist = []
 filename = "ricardo_scraping_test_1.csv"
-f = open(filename, "w")
-headers = ["Preis;Marke;Modell;Registrationdate;Kilometers;Fueltype; fuelconsumption ; performance ;cubiccapacity;bodytype; outsidecolor ;numberofdoors;numberofseats ;emptyweight; transmissiontype;drivingwheels \n"]
-f.write(headers[0])
-f.close()
 
-for x in range(1,400):
+badbrands=(121,141,158,154,172,181,195,198,208,255,287,293,299,290,341)
+for x in range(1,401):
 	print('BRAND {}'.format(x))
 	for z in range(1,300):
+		if x in badbrands:break
 		print('PAGE {}'.format(z))
 		my_ulr = str("https://auto.ricardo.ch/de/s?make="+str(x)+"&offer_type=classified&sort_type=registration_date&sort_order=asc&page="+str(z))
 
