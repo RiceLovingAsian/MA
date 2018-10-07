@@ -1,4 +1,22 @@
-brands = ["aixam","Alfa Romeo","Datsun","American Motors","Aston Martin","Audi","Austin","Bentley","Bertone","Bmw","Bmw-Alpina","Bugatti","Buick","Cadillac","Caterham","Chevrolet","Chrysler","Citroen","citroën","Dacia","Daewoo","Daihatsu","Daimler","De Tomaso","Dodge","Donkervoort","Ferrari","Fiat","Ford","Ford(USA)","Honda","Hs","Hummer","Hyundai","Innocenti","Isuzu","Isuzu(j)","Jaguar","Jeep","Kia","Lada","Lamborghini","Lancia","Land Rover","Land-Rover","Lexus","Ligier","Lotus","Maserati","Mazda","Mercedes-Benz","mercedes","Mg","Minelli","Mini","Mitsubishi","Morgan","Nissan","Oldsmobile","Opel","Peugeot","Pontiac","Porsche","Puch","Qvale","Reliant","Renault","Rolls-Royce","Rover","Saab","Seat","Skoda","Smart","Ssang Yong","Ssangyong","Ssang-yong","Subaru","Suzuki","Talbot","Tata","Toyota","Tvr","Venturi","Volvo","Vw","Volkswagen","Wiesmann","Infiniti","Iveco","Piaggo","Ktm","Sokon","Think","Tesla","Artega","McLaren","Mega","Giotti Victoria","Fisker","Dfsk","Ds Automobiles"]
+brands = [
+"aixam","Alfa Romeo","Datsun","American Motors","Aston Martin",
+"Audi","Austin","Bentley","Bertone","Bmw","Bmw-Alpina",
+"Bugatti","Buick","Cadillac","Caterham","Chevrolet","Chrysler",
+"Citroen","citroën","Dacia","Daewoo","Daihatsu","Daimler",
+"De Tomaso","Dodge","Donkervoort","Ferrari","Fiat",
+"Ford","Ford(USA)","Honda","Hs","Hummer","Hyundai",
+"Innocenti","Isuzu","Isuzu(j)","Jaguar","Jeep",
+"Kia","Lada","Lamborghini","Lancia","Land Rover",
+"Land-Rover","Lexus","Ligier","Lotus","Maserati",
+"Mazda","Mercedes-Benz","mercedes","Mg","Minelli",
+"Mini","Mitsubishi","Morgan","Nissan","Oldsmobile",
+"Opel","Peugeot","Pontiac","Porsche","Puch","Qvale",
+"Reliant","Renault","Rolls-Royce","Rover","Saab","Seat",
+"Skoda","Smart","Ssang Yong","Ssangyong","Ssang-yong",
+"Subaru","Suzuki","Talbot","Tata","Toyota","Tvr",
+"Venturi","Volvo","Vw","Volkswagen","Wiesmann","Infiniti",
+"Iveco","Piaggo","Ktm","Sokon","Think","Tesla","Artega","McLaren","Mega",
+"Giotti Victoria","Fisker","Dfsk","Ds Automobiles",'Gmc']
 brands2 = []
 badguydict = {
 	"land-rover":'land rover',
