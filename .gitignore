@@ -1,0 +1,4 @@
+
+*.pyc
+ReMake/RICARDO.db
+.DS_Store
