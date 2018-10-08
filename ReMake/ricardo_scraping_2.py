@@ -39,3 +39,6 @@ for x in range(1,401):
 
 		if len(page_soup.findAll('button',{'class':'ric-pagination__button mdl-js-button mdl-js-ripple-effect ric-layout__small--hide'}))==0 and len(page_soup.findAll('button',{'class':'ric-pagination__button mdl-js-button mdl-js-ripple-effect'}))==0:
 			break
+print('************************************************')
+print('Finished scraping Ricardo database\nThe local db contains {} entries'.format(db.showcount()))
+print('************************************************')

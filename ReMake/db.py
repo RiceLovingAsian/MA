@@ -38,9 +38,14 @@ def insert(car):
 	insstring += ')'
 	conn = sqlite3.connect('RICARDO.db')
 	c = conn.cursor()
-
 	finstring = "INSERT INTO CARS(price,brand,modell,km,ps,leergewicht,getriebsart,hubraum,antriebsart,türen,sitze,treibstoff,verbrauch) VALUES {0};".format(insstring)
 	c.execute(finstring)
 	conn.commit()
 		
 
+def showcount():
+	conn = sqlite3.connect('RICARDO.db')
+	c = conn.cursor()
+	c.execute('SELECT count(*) from cars;')
+	count = c.fetchall()[0][0]
+	return count
