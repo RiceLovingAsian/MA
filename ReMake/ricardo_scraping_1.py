@@ -49,7 +49,6 @@ class run():
 		try:sauce = urllib.request.urlopen(link)
 		except:
 			self.quitit=True
-			print('quit1')
 		if not self.quitit:
 			soup = bs.BeautifulSoup(sauce, 'lxml')
 			try:self.price = lister(soup.find('div',{'class':'price mdl-typography--font-light'}))[1]
@@ -88,4 +87,3 @@ class run():
 						self.findict[x[0].lower()]=x[1]
 			else:
 				self.quitit = True
-				print('quitit2')

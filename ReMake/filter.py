@@ -45,9 +45,10 @@ def getbrand(artname):
 		 	retstr = ""
 		 	corrlist = []
 		 	for x in dalist:
-		 		corrlist.append(str(x))
 		 		if str(x) not in corrlist:
 		 			retstr += str(x)+' '
+
+		 		corrlist.append(str(x))
 	elif len(dalist)==1:
 	 	retstr = dalist[0]
 	if retstr in badguydict.keys():
