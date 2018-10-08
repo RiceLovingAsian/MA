@@ -43,8 +43,11 @@ def getbrand(artname):
 			retstr = dalist[0]
 		else:
 		 	retstr = ""
+		 	corrlist = []
 		 	for x in dalist:
-		 		retstr += str(x)+' '
+		 		corrlist.append(str(x))
+		 		if str(x) not in corrlist:
+		 			retstr += str(x)+' '
 	elif len(dalist)==1:
 	 	retstr = dalist[0]
 	if retstr in badguydict.keys():
@@ -53,11 +56,18 @@ def getbrand(artname):
 
 
 def getmodel(car,artname):
-	retstr = ''
 	artname = artname.lower()
-	for x in car.brand.lower().split(' '):
-		artname = artname.replace(str(x),'')
+	if 'range' in artname:
+		artname=artname.split(' ')[2:]
+		art2=''
+		for x in artname:
+			if x!=artname[-1]:art2+=str(x+' ')
+			else: art2+=str(x)
+		artname = art2
+	else:
+		for x in car.brand.lower().split(' '):
+			artname = artname.replace(str(x),'')
 	artname = artname.replace("'","")
 	artname = artname.replace('"','')
 	return artname	
-	return retstr
+
