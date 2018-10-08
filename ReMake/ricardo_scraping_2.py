@@ -34,8 +34,9 @@ for x in range(1,401):
 				car = rst.run('https://auto.ricardo.ch'+str(a['href']))
 			else:
 				car = rst.run(str(a["href"]))
-			if car.quitit:break
-			db.insert(car)
+			if car.quitit:
+				print('quitit')
+			else:db.insert(car)
 
 		if len(page_soup.findAll('button',{'class':'ric-pagination__button mdl-js-button mdl-js-ripple-effect ric-layout__small--hide'}))==0 and len(page_soup.findAll('button',{'class':'ric-pagination__button mdl-js-button mdl-js-ripple-effect'}))==0:
 			break
