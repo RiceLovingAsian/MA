@@ -3,17 +3,6 @@ import bs4 as bs
 import urllib.request
 import filter as filthy
 import db,re
-ATTRS = ('modell',
-	'kilometer',
-	'ps',
-	'leergewicht',
-	'getriebeart',
-	'hubraum',
-	'antriebsart',
-	'anzahl türen',
-	'anzahl sitze',
-	'kraftstoff',
-	'verbrauch')
 def function(type):
 	y = ""
 	for x in type:
@@ -68,4 +57,4 @@ class run():
 			for x in self.comblist:
 				#if cleaner(x[0]).lower() in ATTRS:
 				self.findict[cleaner(x[0]).lower().encode()]=cleaner(x[1]).encode()
-			for x in self.findict.keys():print(x,'------',self.findict[x])
+			for x in self.findict.keys():print(x,self.findict[x])
