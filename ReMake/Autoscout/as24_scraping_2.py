@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as soup
 import db
 db.createdb()
 carlist = []
-
+count = 0
 for x in range(1,4000):
 	my_ulr = "https://www.autoscout24.ch/de/autos/alle-marken?page={}&st=1&vehtyp=10".format(x)
 	uClient = ureq(my_ulr)
@@ -20,12 +20,12 @@ for x in range(1,4000):
 
 		
 	
-							#print(car.markestring,car.modelstring)
 	
 	for a in articles:
-		print('https://www.autoscout24.ch/{}'.format(str(a['href'])))
-		car = as24s.run('https://www.autoscout24.ch/{}'.format(str(a['href'])))	
-		if car.findict['preis'.encode()]>400000:print('*************************')
+		count+=1
+		print('Inserat {}/146 752'.format(count))
+		print('https://www.autoscout24.ch{}'.format(str(a['href'])))
+		car = as24s.run('https://www.autoscout24.ch{}'.format(str(a['href'])))	
 		if not car.quitit:db.insert(car)
 
 

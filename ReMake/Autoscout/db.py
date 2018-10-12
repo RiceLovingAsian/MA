@@ -1,5 +1,5 @@
 import sqlite3
-ATTRS = ('preis','brand','modell','kilometer','ps','leergewicht','getriebeart','hubraum','antriebsart','anzahl türen','anzahl sitze','kraftstoff','verbrauch')
+ATTRS = ('preis','brand','modell','kilometer','ps','leergewicht','getriebeart','hubraum','antriebsart','tueren','sitze','treibstoff','verbrauch in l/100 km')
 
 
 
@@ -30,10 +30,9 @@ def insert(car):
 	finstring='('
 	for x in ATTRS:
 		try:finstring+='"{}",'.format(car.findict[x.encode()])
-		except:finstring +='"{}",'.format(x)
+		except:finstring +='"N/a",'
 	finstring = finstring[:-1]
 	finstring += ')'
-	print(finstring.encode())
 	dictoo = dict()
 	for x in ATTRS:
 		try:dictoo[x] = car.findict[x]
