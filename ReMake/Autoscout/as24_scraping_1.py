@@ -18,6 +18,8 @@ def cleaner(toclean):
 	p = re.compile(" {2}")
 	a = re.sub(p,"",toclean)
 	return a
+def getthduckingstring(tostring):
+	return str(tostring.decode())
 
 def lister(tolist,whichitem=0):
 	retlist = []
@@ -27,7 +29,11 @@ def lister(tolist,whichitem=0):
 		return retlist
 	except:
 		return False
-def getcont(text):
+def getcont(text,price=False):
+	if price:
+		print(text.decode())
+		p = re.compile(".+?(?=.-)")
+		text=(p.search(text.decode()).group())
 	permitls = ['1','2','3','4','5','6','7','8','9','0']
 	retls = filter(lambda x:x in permitls,str(text))
 	retls = list(retls)
@@ -57,4 +63,12 @@ class run():
 			for x in self.comblist:
 				#if cleaner(x[0]).lower() in ATTRS:
 				self.findict[cleaner(x[0]).lower().encode()]=cleaner(x[1]).encode()
-			for x in self.findict.keys():print(x,self.findict[x])
+			self.findict['preis'.encode()]=getcont(self.findict['preis'.encode()],True)
+			self.findict['kilometer'.encode()] = getcont(self.findict['kilometer'.encode()])
+			self.findict['leergewicht'.encode()] = getcont(self.findict['leergewicht'.encode()])
+			try:self.findict['hubraum'.encode()] = getcont(self.findict['hubraum'.encode()])
+			except:self.findict['hubraum'.encode()] = 'E-Auto'
+			self.findict['ps'.encode()] = getcont(self.findict['ps'.encode()])
+			try:self.findict['antriebsart'] = getthduckingstring(self.findict['antriebsart'])
+			except:self.findict['antriebsart'.encode()] = getthduckingstring(self.findict['antriebsart'.encode()])
+			self.findict['getriebeart'.encode()] = getthduckingstring(self.findict['getriebeart'.encode()])

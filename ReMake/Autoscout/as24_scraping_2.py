@@ -23,10 +23,10 @@ for x in range(1,4000):
 							#print(car.markestring,car.modelstring)
 	
 	for a in articles:
-			car = as24s.run('https://www.autoscout24.ch/{}'.format(str(a['href'])))
-			#car = as24s.run(str(a["href"]))
-		
-		#if not car.quitit:db.insert(car)
+		print('https://www.autoscout24.ch/{}'.format(str(a['href'])))
+		car = as24s.run('https://www.autoscout24.ch/{}'.format(str(a['href'])))	
+		if car.findict['preis'.encode()]>400000:print('*************************')
+		if not car.quitit:db.insert(car)
 
 
 print('************************************************')
