@@ -76,10 +76,20 @@ class run():
 			except: self.findict['leergewicht'.encode()]='N/a'
 			try:self.findict['hubraum'.encode()] = getcont(self.findict['hubraum'.encode()])
 			except:
-				if self.findict['treibstoff'.encode()] == 'Elektro':
-					self.findict['hubraum'.encode()] = 'E-Auto'
-				else:
-					self.findict['hubraum'.encode()] = 'N/a'
+				try:
+					if self.findict['treibstoff'.encode()] == 'Elektro':
+						self.findict['hubraum'.encode()] = 'E-Auto'
+					else:
+						self.findict['hubraum'.encode()] = 'N/a'
+				except:
+					try:
+						if self.findict['treibstoff'] == 'Elektro':
+							self.findict['hubraum'.encode()] = 'E-Auto'
+						else:
+							self.findict['hubraum'.encode()] = 'N/a'
+					except:
+						self.findict['treibstoff'] = 'N/a'
+						self.findict['hubraum'] = 'N/a'
 			try:self.findict['ps'.encode()] = getcont(self.findict['ps'.encode()])
 			except:
 				try:self.findict['ps'] = getcont(self.findict['ps'])
@@ -93,19 +103,31 @@ class run():
 			except:
 				try:self.findict['sitze']=gettheduckingstring(self.findict['sitze'])
 				except:self.findict['sitze']='N/a'
-			self.findict['treibstoff'.encode()] = gettheduckingstring(self.findict['treibstoff'.encode()])
-			try:self.findict['antriebsart'] = gettheduckingstring(self.findict['antriebsart'])
+			try:self.findict['treibstoff'.encode()] = gettheduckingstring(self.findict['treibstoff'.encode()])
 			except:
-				try:self.findict['antriebsart'.encode()] = gettheduckingstring(self.findict['antriebsart'.encode()])
-				except:self.findict['antriebsart'] = 'N/a'
-			self.findict['getriebeart'.encode()] = gettheduckingstring(self.findict['getriebeart'.encode()])
+				try:self.findict['treibstoff'] = gettheduckingstring(self.findict['antriebsart'])
+				except: self.findict['treibstoff']='N/a'
+			try:self.findict['antriebsart'.encode()] = gettheduckingstring(self.findict['antriebsart'.encode()])
+			except:
+				try:self.findict['antriebsart'] = gettheduckingstring(self.findict['antriebsart'])
+				except: self.findict['antriebsart']='N/a'
+			try:self.findict['getriebeart'.encode()] = gettheduckingstring(self.findict['getriebeart'.encode()])
+			except:
+				try:self.findict['getriebeart'] = gettheduckingstring(self.findict['getriebeart'])
+				except:self.findict['getriebeart'.encode()]='N/a'
 			try:self.findict['verbrauch in l/100 km'.encode()] = getverb(self.findict['verbrauch in l/100 km'.encode()])
 			except:
 				try:self.findict['verbrauch in l/100 km'] = getverb(self.findict['verbrauch in l/100 km'])
-				except:
-					if self.findict['treibstoff'.encode()]=='Elektro':
+				except:self.findict['verbrauch in l/100 km'] = 'N/a'
+			try:self.findict['getriebeart'.encode()]
+			except:
+				try:
+					if self.findict['treibstoff'.encode()] == 'Elektro':
 						self.findict['verbrauch in l/100 km'.encode()] = 'E-Auto'
-					else:self.findict['verbrauch in l/100 km'.encode()] = 'N/a'
-
-
-
+					else:
+						self.findict['verbrauch in l/100 km'.encode()] = 'N/a'
+				except:
+					if self.findict['treibstoff'] == 'Elektro':
+						self.findict['verbrauch in l/100 km'.encode()] = 'E-Auto'
+					else:
+						self.findict['verbrauch in l/100 km'.encode()] = 'N/a'

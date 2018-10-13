@@ -18,7 +18,7 @@ brands = [
 "Iveco","Piaggo","Ktm","Sokon","Think","Tesla","Artega","McLaren","Mega",
 "Giotti Victoria","Fisker","Dfsk","Ds Automobiles",'Gmc','lincoln','maybach','morris',
 "plymouth","simca","trabant","piaggio","Ac","amc","autobianchi","delorean",
-"dkw","mercury","pgo","studebaker",'Triumph']
+"dkw","mercury","pgo","studebaker",'Triumph','Austin-Healey','aero',"agm","allard","alpine"]
 brands2 = []
 badguydict = {
 	"land-rover":'land rover',

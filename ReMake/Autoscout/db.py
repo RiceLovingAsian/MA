@@ -1,10 +1,11 @@
-import sqlite3
+import sqlite3,os
 ATTRS = ('preis','brand','modell','kilometer','ps','leergewicht','getriebeart','hubraum','antriebsart','tueren','sitze','treibstoff','verbrauch in l/100 km')
-
+dirname = os.path.dirname(__file__)
+DBboi = os.path.join(dirname, './AUTOSCOUT.db')
 
 
 def createdb():
-	conn = sqlite3.connect('AUTOSCOUT.db')
+	conn = sqlite3.connect(DBboi)
 	c = conn.cursor()
 	c.execute('''DROP TABLE CARS''')
 	c.execute('''CREATE TABLE CARS(
@@ -42,7 +43,7 @@ def insert(car):
 		insstring+='"{0}",'.format(dictoo[x])
 	insstring = insstring[:-1]
 	insstring += ')'
-	conn = sqlite3.connect('AUTOSCOUT.db')
+	conn = sqlite3.connect(DBboi)
 	c = conn.cursor()
 	finstring = "INSERT INTO CARS(price,brand,modell,km,ps,leergewicht,getriebsart,hubraum,antriebsart,türen,sitze,treibstoff,verbrauch) VALUES {0};".format(finstring)
 	c.execute(finstring)
@@ -50,7 +51,7 @@ def insert(car):
 		
 
 def showcount():
-	conn = sqlite3.connect('AUTOSCOUT.db')
+	conn = sqlite3.connect(DBboi)
 	c = conn.cursor()
 	c.execute('SELECT count(*) from cars;')
 	count = c.fetchall()[0][0]
