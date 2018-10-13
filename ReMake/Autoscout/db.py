@@ -9,7 +9,7 @@ def createdb():
 	c = conn.cursor()
 	c.execute('''DROP TABLE CARS''')
 	c.execute('''CREATE TABLE CARS(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		id INT PRIMARY KEY AUTOINCREMENT,
 		price INT,
 		brand,
 		modell,

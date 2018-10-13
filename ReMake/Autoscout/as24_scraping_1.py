@@ -64,6 +64,7 @@ class run():
 			self.findict['modell'.encode()] = self.modell
 			prop=lister(prop)
 			value=lister(value)
+			print(value[0])
 			self.comblist = []
 			for x in range(len(prop)):
 				self.comblist.append((prop[x],value[x]))
