@@ -8,7 +8,8 @@ carlist = []
 count = 0
 for x in range(1,4000):
 	my_ulr = "https://www.autoscout24.ch/de/autos/alle-marken?page={}&st=1&vehtyp=10".format(x)
-	uClient = ureq(my_ulr)
+	try:uClient = ureq(my_ulr)
+	except:uClient = ureq(my_ulr)
 
 	myData = uClient.read()
 
