@@ -1,5 +1,5 @@
 brands = [
-"aixam","Alfa Romeo","Datsun","American Motors","Aston Martin",
+"Adler","aixam","Alfa Romeo","Datsun","American Motors","Aston Martin",
 "Audi","Austin","Bentley","Bertone","Bmw","Bmw-Alpina",
 "Bugatti","Buick","Cadillac","Caterham","Chevrolet","Chrysler",
 "Citroen","citroën","Dacia","Daewoo","Daihatsu","Daimler",
@@ -19,7 +19,7 @@ brands = [
 "Giotti Victoria","Fisker","Dfsk","Ds Automobiles",'Gmc','lincoln','maybach','morris',
 "plymouth","simca","trabant","piaggio","Ac","amc","autobianchi","delorean",
 "dkw","mercury","pgo","studebaker",'Triumph','Austin-Healey','aero',"agm","allard","alpine","alvis","amilcar","Armstrong Siddeley",'riley','auburn',
-'bristol','clenet']
+'bristol','clenet',"cmc"]
 brands2 = []
 badguydict = {
 	"land-rover":'land rover',
