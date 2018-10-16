@@ -21,6 +21,8 @@ antriebsart = (getfromdb(DBboi1,"antriebsart"))
 treibstoff = (getfromdb(DBboi1,"treibstoff"))
 verbrauch = (getfromdb(DBboi1,"verbrauch"))
 leergewicht = (getfromdb(DBboi1,"leergewicht"))
+hubraum = (getfromdb(DBboi1, "hubraum"))
+modell = (getfromdb(DBboi1, "modell"))
 
 brandnumberdick = {"aixam" : "1",
              "alfa romeo " : "2",
@@ -349,7 +351,10 @@ getriebsartenumerated = []
 antriebsartenumerated = []
 treibstoffenumerated = []
 verbrauchenumerated = []
-finlist = []
+leergewichtenumerated = []
+hubraumenumerated = []
+modellenumerated = []
+modeldict = {}
 
 
 for x in brand:
@@ -367,6 +372,21 @@ for x in treibstoff:
 for x in verbrauch:
 	verbrauchenumerated.append(verbrauchnumberdick[x[0]])
 
+for w in leergewicht:
+	if w[0] == "-" : w = ("0 kg",)
+	leergewichtenumerated.append(int(w[0][:-3]))
+
+for w in hubraum:
+	if w[0] == "-" : w = ("0    ",)
+	try:hubraumenumerated.append(int(w[0][:-4]))
+	except: hubraumenumerated.append(int(w[0][:-7]))
+
+for x in modell:
+	modeldict[x[0]] += 1
+
+
+
+
 
 
 #print(brandenumerated)
@@ -374,11 +394,11 @@ for x in verbrauch:
 #print(antriebsartenumerated)
 #print(treibstoffenumerated)
 #print(verbrauchenumerated)
+#print(leergewichtenumerated)
+#print(hubraumenumerated)
 
 
-for w in leergewicht:
-	finlist.append(list(filter(lambda x:x in (1,2,3,4,5,6,7,8,9,0),w)))
-print(finlist)
+
 	
 
 
