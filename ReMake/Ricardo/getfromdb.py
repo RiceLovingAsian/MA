@@ -23,6 +23,7 @@ verbrauch = (getfromdb(DBboi1,"verbrauch"))
 leergewicht = (getfromdb(DBboi1,"leergewicht"))
 hubraum = (getfromdb(DBboi1, "hubraum"))
 modell = (getfromdb(DBboi1, "modell"))
+modellist = []
 
 brandnumberdick = {"aixam" : "1",
              "alfa romeo " : "2",
@@ -382,9 +383,19 @@ for w in hubraum:
 	except: hubraumenumerated.append(int(w[0][:-7]))
 
 for x in modell:
-	modeldict[x[0]] += 1
+	quitit = False
+	try:
+		if x[0][0] == ' ':
+			x = (x[0][1:],)
+	except IndexError: qutit=True
+	if not quitit:
+		if x[0] not in modellist: modellist.append(x[0])
+
+for x in modellist:
+	modeldict[x] = modellist.index(x)
 
 
+print(modeldict)
 
 
 
