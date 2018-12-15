@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module produkt_html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>produkt_html</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cuser%5Cdocuments%5Cmaturaarbeit%5Cprodukt%20prg%5Cprodukt_html.py">c:\users\user\documents\maturaarbeit\produkt prg\produkt_html.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="produkt_html.html#run">run</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="run">class <strong>run</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Hier&nbsp;werden&nbsp;alle&nbsp;Attribute&nbsp;gesucht&nbsp;und&nbsp;herausgelesen&nbsp;aus&nbsp;den&nbsp;Strings.&nbsp;Dabei&nbsp;wird&nbsp;immer&nbsp;überprüft&nbsp;wie&nbsp;der&nbsp;String&nbsp;codiert&nbsp;ist.&nbsp;Falls&nbsp;nötig&nbsp;wird&nbsp;decodiert.&nbsp;<br>
+Beim&nbsp;"ricardo_scraping_1.py"&nbsp;wird&nbsp;das&nbsp;Decodieren&nbsp;nicht&nbsp;benötigt.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-cleaner"><strong>cleaner</strong></a>()</dt><dd><tt>Python&nbsp;hat&nbsp;Schwierigkeiten&nbsp;Umlaute&nbsp;zu&nbsp;verarbeiten.&nbsp;Diese&nbsp;werden&nbsp;ersetzt&nbsp;durch&nbsp;"e",&nbsp;"ue"&nbsp;und&nbsp;"ae".&nbsp;Weiterhin&nbsp;werden&nbsp;aus&nbsp;darstellungsgründen&nbsp;<br>
+und&nbsp;&nbsp;durch&nbsp;ein&nbsp;Leerzeichen&nbsp;ersetzt.&nbsp;Bei&nbsp;re.compile&nbsp;werden&nbsp;die&nbsp;2&nbsp;Leerzeichen&nbsp;vor&nbsp;und&nbsp;nach&nbsp;dem&nbsp;String&nbsp;durch&nbsp;ein&nbsp;Leerzeichen&nbsp;ersetzt.</tt></dd></dl>
+ <dl><dt><a name="-computeCost"><strong>computeCost</strong></a>(X, y, theta)</dt><dd><tt>Cost&nbsp;function&nbsp;wird&nbsp;berechnet.</tt></dd></dl>
+ <dl><dt><a name="-createdb"><strong>createdb</strong></a>()</dt><dd><tt>Hier&nbsp;wird&nbsp;die&nbsp;Datenbank&nbsp;erstellt.&nbsp;Da&nbsp;mehrere&nbsp;Durchgänge&nbsp;nötig&nbsp;sind,&nbsp;wird&nbsp;mit&nbsp;c.execute("drop&nbsp;table&nbsp;cars")&nbsp;die&nbsp;alten&nbsp;Daten&nbsp;gelöscht.&nbsp;So&nbsp;gibt&nbsp;es&nbsp;keine&nbsp;mehrfaches&nbsp;Aufkommen&nbsp;der&nbsp;selben&nbsp;Datei.&nbsp;<br>
+Mit&nbsp;"CREATE&nbsp;TABLE&nbsp;CARS"&nbsp;wird&nbsp;eine&nbsp;DB&nbsp;mit&nbsp;den&nbsp;darunter&nbsp;aufgeführten&nbsp;Begriffen&nbsp;erstellt.</tt></dd></dl>
+ <dl><dt><a name="-getbrand"><strong>getbrand</strong></a>(artname)</dt><dd><tt>Hier&nbsp;werden&nbsp;die&nbsp;Marken&nbsp;beschaffen.&nbsp;Dabei&nbsp;werden&nbsp;die&nbsp;Marken&nbsp;mit&nbsp;der&nbsp;"filter"-Liste&nbsp;abgeglichen.&nbsp;Nur&nbsp;die&nbsp;Marken&nbsp;welche&nbsp;sich&nbsp;in&nbsp;der&nbsp;"Filter"-Liste&nbsp;befinden&nbsp;werden&nbsp;aus&nbsp;den&nbsp;Strings&nbsp;entnommen.</tt></dd></dl>
+ <dl><dt><a name="-getcont"><strong>getcont</strong></a>(text, price=False)</dt><dd><tt>Hier&nbsp;werden&nbsp;aus&nbsp;der&nbsp;Strings&nbsp;die&nbsp;jeweiligen&nbsp;Zahlenwerte&nbsp;entnommen.&nbsp;Präfixe&nbsp;wie&nbsp;kg,&nbsp;PS&nbsp;oder&nbsp;CHF&nbsp;werden&nbsp;nicht&nbsp;berücksichtigt.&nbsp;Weiterhin&nbsp;wird&nbsp;auch&nbsp;überprüft&nbsp;ob&nbsp;ein&nbsp;Preis&nbsp;vorhanden&nbsp;ist.&nbsp;<br>
+Auktionen&nbsp;beinhalten&nbsp;keinen&nbsp;Preis.&nbsp;Somit&nbsp;werden&nbsp;diese&nbsp;Autionen&nbsp;herausgefiltert.</tt></dd></dl>
+ <dl><dt><a name="-getmodel"><strong>getmodel</strong></a>(car, artname)</dt><dd><tt>Mit&nbsp;dieser&nbsp;Funktion&nbsp;wird&nbsp;die&nbsp;Marke&nbsp;aus&nbsp;den&nbsp;Strings&nbsp;geholt.</tt></dd></dl>
+ <dl><dt><a name="-gettheduckingstring"><strong>gettheduckingstring</strong></a>(tostring)</dt><dd><tt>Die&nbsp;Strings&nbsp;sind&nbsp;verschieden&nbsp;codiert.&nbsp;Entweder&nbsp;in&nbsp;UTF-8&nbsp;oder&nbsp;binary&nbsp;values.&nbsp;Bei&nbsp;UTF-8&nbsp;braucht&nbsp;es&nbsp;keine&nbsp;decodierung.&nbsp;Mit&nbsp;dieser&nbsp;Funktion&nbsp;wird&nbsp;der&nbsp;String&nbsp;so&nbsp;decodiert,&nbsp;<br>
+dass&nbsp;mit&nbsp;ihm&nbsp;weiter&nbsp;gearbeitet&nbsp;werden&nbsp;kann.</tt></dd></dl>
+ <dl><dt><a name="-getverb"><strong>getverb</strong></a>(toverb)</dt><dd><tt>Der&nbsp;Verbrauch&nbsp;ist&nbsp;im&nbsp;Gegensatz&nbsp;zu&nbsp;den&nbsp;anderen&nbsp;numerischen&nbsp;Werten&nbsp;komplizierter&nbsp;dargestellt.&nbsp;Die&nbsp;Darstellung&nbsp;sieht&nbsp;folgendermassen&nbsp;aus:&nbsp;'zahl/zahl/zahl(st/land/tot)'.&nbsp;<br>
+Der&nbsp;String&nbsp;wird&nbsp;bei&nbsp;""&nbsp;getrennt.&nbsp;Davon&nbsp;wird&nbsp;dann&nbsp;der&nbsp;3.&nbsp;Wert&nbsp;genommen.&nbsp;Dieser&nbsp;sieht&nbsp;folgendermassen&nbsp;aus:&nbsp;'zahl(st'.&nbsp;Danach&nbsp;folgt&nbsp;ein&nbsp;Split&nbsp;bei&nbsp;der&nbsp;Klammer.&nbsp;<br>
+Am&nbsp;Schluss&nbsp;wird&nbsp;der&nbsp;1.&nbsp;Wert,&nbsp;der&nbsp;totale&nbsp;Verbrauch,&nbsp;genommen.</tt></dd></dl>
+ <dl><dt><a name="-gradientDescent"><strong>gradientDescent</strong></a>(X, y, theta, iters, alpha)</dt><dd><tt>Das&nbsp;gradienten&nbsp;Verfahren&nbsp;wird&nbsp;definiert.</tt></dd></dl>
+ <dl><dt><a name="-lister"><strong>lister</strong></a>(tolist, whichitem=0)</dt><dd><tt>Es&nbsp;wird&nbsp;eine&nbsp;Liste&nbsp;erstellt,&nbsp;aus&nbsp;den&nbsp;jeweiligen&nbsp;ersten&nbsp;Elementen,&nbsp;einer&nbsp;Liste&nbsp;bestehend&nbsp;aus&nbsp;Listen.</tt></dd></dl>
+ <dl><dt><a name="-showcount"><strong>showcount</strong></a>()</dt><dd><tt>Zeigt&nbsp;an&nbsp;wie&nbsp;viele&nbsp;Elemente&nbsp;heruntergeladen&nbsp;worden&nbsp;sind.</tt></dd></dl>
+</td></tr></table>
+</body></html>
