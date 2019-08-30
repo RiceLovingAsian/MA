@@ -10,7 +10,7 @@ stopit = False
 for x in range(1,4000):
 	my_ulr = "https://www.autoscout24.ch/de/autos/alle-marken?page={}&st=1&vehtyp=10".format(x)
 	try:uClient = ureq(my_ulr)
-	except socket.gaierror:stopit = True
+	except:stopit = True
 	if stopit:
 		stopit=False
 	else:
